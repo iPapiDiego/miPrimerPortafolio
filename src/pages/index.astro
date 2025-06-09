@@ -1,11 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
 ---
 
 <Layout>
     <main>
         <section class="w-full lg:w-[740px] mx-auto py-44">
+            <img
+                class="rounded-full w-12 h-12 mb-4"
+                src="/public/img/yo.JPG"
+                alt="Diego photo"
+            />
             <h1
                 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
             >
@@ -19,12 +27,29 @@ import Badge from "../components/Badge.astro";
                     <Badge>Disponible para trabajar</Badge>
                 </a>
             </h1>
-            <h2 class="text-xl opacity-80">
-                +15 años de experiencia. Desarrollador Web y Creador de
-                Contenido. De Lima Peru. Especializado en crear aplicaciones
-                unicas.
+            <h2 class="text-xl text-wrap">
+                <span>+15 años de experiencia.</span>
+                <span class="text-yellow-100/90"
+                    >Desarrollador Web y Creador de Contenido.</span
+                >
+                <span class="text-red-100/90">De Lima Peru.</span>
+                <span class="opacity-85"
+                    >Especializado en crear aplicaciones unicas.</span
+                >
             </h2>
-            <ul></ul>
+            <nav class="flex py-10">
+                <SocialPill
+                    href="https://www.linkedin.com/in/diego-richard-ayme-pe%C3%B1a-b743561b8/"
+                >
+                    <LinkedinIcon class="w-10 h-10" />
+                    Linkedin
+                </SocialPill>
+
+                <SocialPill href="https://github.com/iPapiDiego">
+                    <GitHubIcon class="w-10 h-10" />
+                    GitHub
+                </SocialPill>
+            </nav>
         </section>
     </main>
 </Layout>
