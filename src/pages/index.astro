@@ -4,11 +4,15 @@ import Badge from "../components/Badge.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
 ---
 
-<Layout>
+<Layout title="Portafolio de Diego" description="Contratame">
     <main>
-        <section class="w-full lg:w-[740px] mx-auto py-44">
+        <SectionContainer class="py-44 pb-22">
             <img
                 class="rounded-full w-12 h-12 mb-4"
                 src="/public/img/yo.JPG"
@@ -37,19 +41,31 @@ import GitHubIcon from "../components/icons/GitHub.astro";
                     >Especializado en crear aplicaciones unicas.</span
                 >
             </h2>
-            <nav class="flex py-10">
+            <nav class="flex gap-x-3 py-10">
                 <SocialPill
                     href="https://www.linkedin.com/in/diego-richard-ayme-pe%C3%B1a-b743561b8/"
                 >
-                    <LinkedinIcon class="w-10 h-10" />
+                    <LinkedinIcon class="size-6" />
                     Linkedin
                 </SocialPill>
 
                 <SocialPill href="https://github.com/iPapiDiego">
-                    <GitHubIcon class="w-10 h-10" />
+                    <GitHubIcon class="size-6" />
                     GitHub
                 </SocialPill>
+
+                <SocialPill href="https://github.com/iPapiDiego">
+                    <Mail class="size-7" />
+                    diego-ggwp@hotmail.com
+                </SocialPill>
             </nav>
-        </section>
+        </SectionContainer>
+        <SectionContainer>
+            <h2 class="text-2xl font-bold flex gap-x-2 items-center">
+                <BriefCase class="size-7"/>
+                Experiencia Laboral
+            </h2>
+            <Experience />
+        </SectionContainer>
     </main>
 </Layout>

@@ -1,20 +1,28 @@
 ---
 import Header from "../components/Header.astro";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/src/styles/global.css" />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<div
-			class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 
+			class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24
 			[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
 		>
 		</div>
@@ -29,10 +37,8 @@ import Header from "../components/Header.astro";
 	}
 	html,
 	body {
-		
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		
 	}
 </style>
